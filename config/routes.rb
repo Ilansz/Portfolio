@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'sites/index'
-  get 'sites/show'
+  get "sites", to: "sites#index"
+  get "sites/:id", to: "sites#show", as: :site
   get 'sites/new'
   get 'sites/create'
   get 'sites/edit'
