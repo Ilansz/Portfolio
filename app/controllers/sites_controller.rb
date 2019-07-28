@@ -1,14 +1,12 @@
 class SitesController < ApplicationController
-
   before_action :set_site, only: [:show, :edit, :update, :destroy]
-
 
   def index
     @sites = Site.all
   end
 
   def show
-    @site = Site.find(params_id)
+    # @site = Site.find(params_id)
   end
 
   def new
@@ -16,8 +14,9 @@ class SitesController < ApplicationController
   end
 
   def create
-    @site = RestaurantSite.new(site_params)
+    @site = Site.new(site_params)
     @site.save
+    redirect_to sites_path
   end
 
   def edit
@@ -43,6 +42,5 @@ class SitesController < ApplicationController
   def set_site
     @site = Site.find(params[:id])
   end
-
 
 end

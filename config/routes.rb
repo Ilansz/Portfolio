@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # get 'sites/edit'
   # get 'sites/update'
   # get 'sites/destroy'
-  # root to: 'pages#home'
+  root to: 'sites#index'
 
   resources :sites
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
