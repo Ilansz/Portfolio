@@ -7,16 +7,20 @@
 </div>
 
 
-<% @sites.each do |site| %>
-<%= link_to site_path(site) do %>
-  <div class="card-trip">
+<div class="container">
+  <div class="row">
+  <% @sites.each do |site| %>
+  <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-between my-4">
+  <div class="card-trip ">
+  <%= link_to site_path(site) do %>
     <img src="https://res.cloudinary.com/dnsaghvzd/image/upload/v1564322148/App2Wait_lryvr0.png" />
     <div class="card-trip-infos">
-      <div>
-        <h2><%= site.title %></h2>
-        <p><%= site.url %></p>
-      </div>
+      <h2 class="text-center"><%= site.title %></h2>
+      <!-- <p><%#= site.url %></p> -->
     </div>
+  <% end %>
+  </div>
   </div>
   <% end %>
-<% end %>
+  </div>
+</div>
