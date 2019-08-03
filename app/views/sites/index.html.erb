@@ -1,0 +1,26 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);">
+  <div class="container">
+    <h1>We create, improve or help with your web presence</h1>
+    <p>A web presence became mandatory, we are here to help you with that</p>
+    <a class="btn btn-flat btn-success" href="#">Devis gratuit</a>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+  <% @sites.each do |site| %>
+  <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-between my-4">
+  <div class="card-trip ">
+  <%= link_to site_path(site) do %>
+    <img src="https://res.cloudinary.com/dnsaghvzd/image/upload/v1564322148/App2Wait_lryvr0.png" />
+    <div class="card-trip-infos">
+      <h2 class="text-center"><%= site.title %></h2>
+      <!-- <p><%#= site.url %></p> -->
+    </div>
+  <% end %>
+  </div>
+  </div>
+  <% end %>
+  </div>
+</div>
